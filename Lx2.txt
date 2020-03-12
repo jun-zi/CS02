@@ -1,0 +1,30 @@
+C#企业级开发技术练习2答题卡
+
+班级：计算机信息管理1班     
+姓名：李初阳
+学号：20190307123
+
+注：请将答案放置在序号下方。*/
+
+（一） string[] languages = { "jacascript", ".net", "ecmascript", "golang", "java" };
+       int a = 96;
+       foreach (string b in languages)
+       {
+           a = a + 1;
+           Console.Write(b.PadRight(11, '&'));
+           Console.WriteLine($"{a++.ToString().PadLeft(5, '*')}");
+        }
+
+（二） Console.WriteLine("程序语言:");
+       string lgs = "javascript,.net,ecmascript,golang,java";
+       string[] c = lgs.Split(",");
+       int  i = 0, k = 0, l = 0;
+       foreach (string a in c)
+          {
+              Console.WriteLine(a);
+              if (a.Contains("a")) i++;
+              if (a.StartsWith("j")) k++;
+              if (a.EndsWith("t")) l++;
+          }
+       Console.WriteLine(其中:);
+       Console.WriteLine($"包含a:{i}门,j开头:{k}门,t结尾:{l}门");
